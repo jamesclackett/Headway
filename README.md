@@ -13,8 +13,8 @@ The app's weight tracker allows the user to record their weight and/or caloric i
 
 ### User Interface:
 
-<img width="200" alt="image" src="https://github.com/jamesclackett/Headway/assets/55019466/642add5a-098d-4f83-9e52-09de119c130b">
-<img width="200" alt="image" src="https://github.com/jamesclackett/Headway/assets/55019466/f1d51faa-c91a-4465-8bc9-5ed06ea24df5">
-<img width="200" alt="image" src="https://github.com/jamesclackett/Headway/assets/55019466/91a1d3d3-091e-427b-9f65-665f0d74dd81">
+<img width="200" alt="image" src="https://github.com/jamesclackett/Headway-Android/assets/55019466/c1a75d4d-3d27-4076-be09-9e426ea14a77">
+<img width="200" alt="image" src="https://github.com/jamesclackett/Headway-Android/assets/55019466/eb43773f-783c-40cc-94f3-1fb6230108e6">
+<img width="200" alt="image" src="https://github.com/jamesclackett/Headway-Android/assets/55019466/88d53f34-5dfc-4e5d-a5de-c8db4650b0b8">
 
 ---
