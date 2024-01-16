@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/routineLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_border_routine"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal">
+
+
+    <Button
+        android:id="@+id/routine_item_button"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="start"
+        android:maxLength="15"
+        android:onClick="startRoutineActivity"
+        android:padding="10dp"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="@color/colorDarkGrey"
+        android:textSize="35sp" />
+
+    <!--
+    <ImageView
+        android:id="@+id/delete_routine_button"
+        android:layout_width="50sp"
+        android:background="@android:color/transparent"
+        android:layout_height="match_parent"
+        android:onClick="askIfDelete"
+        android:src="@drawable/ic_delete_button" />
+        -->
+
+    <ImageView
+        android:id="@+id/edit_routine_name_button"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:onClick="editRoutineName"
+        android:paddingTop="13dp"
+        android:src="@drawable/ic_edit_name_button"
+        android:visibility="gone" />
+
+
+</LinearLayout>

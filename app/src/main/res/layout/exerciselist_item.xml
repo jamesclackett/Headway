@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/exerciseLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@drawable/bottom_border"
+    android:focusableInTouchMode="true"
+    android:orientation="horizontal"
+    android:paddingStart="3dp"
+    android:paddingLeft="3dp">
+
+
+    <EditText
+        android:id="@+id/exercise_name_EditText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:cursorVisible="false"
+        android:fontFamily="sans-serif-condensed"
+        android:hint="@string/exercise_name_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textCapWords"
+        android:maxLength="21"
+        android:padding="5dp"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/reps_EditText"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="7.5dp"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:cursorVisible="false"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/reps_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textVisiblePassword"
+        android:maxLength="3"
+        android:textAlignment="center"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/sets_EditText"
+        android:layout_width="55dp"
+        android:layout_height="match_parent"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:cursorVisible="false"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/sets_hint"
+        android:imeOptions="actionDone"
+        android:inputType="textVisiblePassword"
+        android:maxLength="3"
+        android:textAlignment="center"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/weight_EditText"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:autofillHints=""
+        android:background="@android:color/transparent"
+        android:cursorVisible="false"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="@string/weight_hint"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal"
+        android:maxLength="5"
+        android:textAlignment="center"
+        android:textSize="21sp" />
+
+
+</LinearLayout>

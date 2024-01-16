@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightBeige"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <ImageView
+            android:id="@+id/done_button_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_done_button"
+            android:onClick="detachHelper"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/toolbarText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:text="Headway"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/main_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/heading_bottom_border"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="start"
+        android:paddingStart="14dp"
+        android:paddingLeft="14dp"
+        android:paddingBottom="7.5dp"
+        android:text="Routines"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_main" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/routine_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_heading" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:onClick="deleteRoutines"
+        android:text="DELETE ALL"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/add_routine_button" />
+
+    <Button
+        android:id="@+id/add_routine_button"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/ic_add_button"
+        android:onClick="newRoutine"
+        android:paddingRight="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

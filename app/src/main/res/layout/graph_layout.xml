@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".GraphActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_third"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="center_vertical"
+            android:paddingBottom="5dp"
+            android:text="Headway"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/graph_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/graph_heading_border"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="start"
+        android:paddingStart="14dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="17dp"
+        android:paddingBottom="7.5dp"
+        android:text="Weight Tracker"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_third" />
+
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/calorie_graph"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/stats_display_layout"
+        app:layout_constraintTop_toBottomOf="@id/graph_heading" />
+
+    <LinearLayout
+        android:id="@+id/stats_display_layout"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/stats_input_layout"
+        app:layout_constraintEnd_toStartOf="@id/calorie_stats_display"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:text="Current Weight:"
+            android:textAlignment="center"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/person_current_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:paddingBottom="15dp"
+            android:text="0kg"
+            android:textAlignment="center"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="35sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/calorie_stats_display"
+        android:layout_width="0dp"
+        android:layout_height="160dp"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        app:layout_constraintBottom_toTopOf="@id/stats_input_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/stats_display_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:text="Calories Today:"
+            android:textAlignment="center"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/todays_calories_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal"
+            android:text="0kcal"
+            android:textAlignment="center"
+            android:textColor="@color/colorDarkGrey"
+            android:textSize="35sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="submitCalories"
+            android:text="Submit"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/stats_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/full_border_beige"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:id="@+id/calorie_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Calories"
+            android:inputType="number"
+            android:maxLength="4" />
+
+        <Button
+            android:id="@+id/enter_calories_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_add_button_noback"
+            android:onClick="appendCalories" />
+
+        <EditText
+            android:id="@+id/person_weight_edittext"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="Weight"
+            android:inputType="numberDecimal"
+            android:maxLength="5" />
+
+        <Button
+            android:id="@+id/enter_person_weight_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/ic_add_button_noback"
+            android:onClick="submitWeight"
+            android:padding="0dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
