@@ -5,7 +5,7 @@ Headway allows users to record their various workout routines. It is designed wi
 
 An unlimited number of routines can be created, edited and deleted. Within each of these routines the user can record and edit as many different exercises as they please, as well as keeping notes. 
 
-The app's weight tracker allows the user to record their weight and/or caloric intake each day. Both data is visualised on a chart for the user to compare. It is possible to change units between kilograms (kg) and pounds (lb).
+The app's weight tracker allows the user to record their weight and/or caloric intake each day. Both data is visualised on a chart for the user to compare using MPAndroidChart. It is possible to change units between kilograms (kg) and pounds (lb).
 
 **_Headway is available on Android and can be downloaded from the Google Play Store (https://play.google.com/store/apps/details?id=com.jimboidin.headway)_**
 
